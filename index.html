@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <title>PhoneGap2.0 Test</title>
+
+<script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="childbrowser.js"></script>
+
+
+<script type="text/javascript"> 
+
+function init() {
+
+    document.addEventListener("deviceready",onDeviceReady,false); 
+   
+}
+
+function onDeviceReady() {
+
+			alert("Hello");
+
+}
+      
+function Google()
+{
+    alert("Google displays here");
+
+	window.plugins.childBrowser.showWebPage("http://www.google.com", { showLocationBar: true });
+}
+
+function Bing()
+{
+    alert("Bing displays here");
+
+    window.plugins.childBrowser.showWebPage("http://www.bing.com", { showLocationBar: true });
+}
+
+</script>
+
+  </head>
+
+<body onload="init()";>
+    <h1>PhoneGap 2.0 with Child Browser</h1>
+    <form>
+        <input type="button" value="Google" onclick="Google()" />
+        <br />
+        <input type="button" value="Bing" onclick="Bing()" />
+    </form>
+    <br />
+
+<a href="#" onclick="window.plugins.childBrowser.showWebPage('http://www.google.com');">Open Google.com in child browser</a>
+</body>
+</html>
+
+</html>
